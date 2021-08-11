@@ -10,7 +10,7 @@
     "windows-zip-function": "Compress-Archive index.js, controllers/ function.zip",
     "windows-zip-layer": "",
     "unix-zip": "zip function.zip index.js controllers/*",
-    "deploy-function": "",
+    "deploy-function": "aws lambda update-function-code --function-name take-challenge --zip-file fileb://function.zip",
     "deploy-layer": ""
   }
 }
