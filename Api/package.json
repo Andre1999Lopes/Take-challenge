@@ -8,9 +8,10 @@
   },
   "scripts": {
     "windows-zip-function": "Compress-Archive index.js, controllers/ function.zip",
-    "windows-zip-layer": "",
-    "unix-zip": "zip function.zip index.js controllers/*",
+    "windows-zip-layer": "cp node_modules/, package.json nodejs && Compress-Archive nodejs/ layer.zip",
+    "unix-zip-function": "zip function.zip index.js controllers/*",
+    "unix-zip-layer": "if [ ! -e nodejs ]; then mkdir nodejs; fi && cp -r node_modules package.json nodejs && zip -r layer.zip nodejs/*",
     "deploy-function": "aws lambda update-function-code --function-name take-challenge --zip-file fileb://function.zip",
-    "deploy-layer": ""
+    "deploy-layer": "aws lambda publish-layer-version --layer-name take-challenge-layer --compatible-runtimes nodejs14.x --zip-file fileb://layer.zip"
   }
 }
