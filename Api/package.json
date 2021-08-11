@@ -9,7 +9,7 @@
   "scripts": {
     "windows-zip-function": "Compress-Archive index.js, controllers/ function.zip",
     "windows-zip-layer": "",
-    "unix-zip": "",
+    "unix-zip": "zip function.zip index.js controllers/*",
     "deploy-function": "",
     "deploy-layer": ""
   }
