@@ -1,6 +1,6 @@
 # Take Challenge
 Chatbot criado através da plataforma [BLiP](https://blip.ai) para a prova técnica da [Take Blip](https://take.net).
-É possível interagir com o chatbot a partir [deste link](https://chat.blip.ai/?appKey=Zmlyc3Rib3Q1OTowNzY2ZDUwNS05MzA4LTRkNGMtYjc2Mi1hZTkzNzBjOWY5ZmU=)
+É possível interagir com o chatbot a partir [deste link](https://chat.blip.ai/?appKey=Zmlyc3Rib3Q1OTowNzY2ZDUwNS05MzA4LTRkNGMtYjc2Mi1hZTkzNzBjOWY5ZmU=).
 
 ## Funcionamento do chatbot
 
