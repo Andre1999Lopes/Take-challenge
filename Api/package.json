@@ -7,8 +7,8 @@
     "node-fetch": "^2.6.1"
   },
   "scripts": {
-    "zip-function": "zip function.zip src/index.js src/controllers/*",
-    "zip-layer": "if [ ! -e nodejs ]; then mkdir nodejs; fi && cp -r src/node_modules src/package.json nodejs && zip -r layer.zip nodejs/*",
+    "zip-function": "cd src && zip -r ../function.zip ./*",
+    "zip-layer": "if [ ! -e nodejs ]; then mkdir nodejs; fi && cp -r node_modules package.json nodejs && zip -r layer.zip nodejs/*",
     "deploy-function": "aws lambda update-function-code --function-name take-challenge --zip-file fileb://function.zip",
     "deploy-layer": "aws lambda publish-layer-version --layer-name take-challenge-layer --compatible-runtimes nodejs14.x --zip-file fileb://layer.zip"
   }
